@@ -27,8 +27,6 @@ public class Call {
             response =  HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
 
             if (response != null) {
-                System.out.println("Resposta da requisição GET:");
-                System.out.println(response.body());
                 return response.body();
             } else {
                 System.out.println("Não houve resposta da requisição.");
